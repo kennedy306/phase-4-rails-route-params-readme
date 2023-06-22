@@ -1,8 +1,10 @@
 class CheesesController < ApplicationController
-
-  def index
-    cheeses = Cheese.all
-    render json: cheeses
+  
+    def show
+      # Retrieve the cheese with the matching ID
+      @cheese = Cheese.find(params[:id])
+      # Return the appropriate response, e.g., render or redirect
+    end
   end
+  
 
-end
